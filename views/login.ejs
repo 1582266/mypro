@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<h1><img src="img/shopex.png"/></h1>
+		<div class="wrap">
+			<div class="logo">
+				<img src="img/ecshop-logo.png"/>
+			</div>
+			<div class="login">
+				<p>
+					<input type="text" id="username" placeholder="用户名" />
+				</p>
+				<p>
+					<input type="text" id="psw" placeholder="密码" />
+				</p>
+				<p>
+					<input type="text" id="num" placeholder="验证码" />
+					<a class="code" href=""></a>
+				</p>
+				<button onclick="login()">登 录</button>
+				<div class="save">
+					<input type="checkbox" id="msg"/>
+					<label for="msg">保存登录信息</label>
+					<a href="">忘记密码？</a>
+					<a href="">去店铺首页>></a>
+				</div>
+			</div>
+			<div class="bj">
+				<img src="img/login_bar.png"/>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/login.js" ></script>
+</html>

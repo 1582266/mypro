@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	</head>
+	<body>
+		<div class="right">
+			<h2>
+				<a href="">ECSHOP管理中心</a>
+				<span> - 系统信息</span>
+			</h2>
+			<div class="information">
+				<p>添加商品成功。</p>
+				<p>如果您不做出选择，将在<span class="count">3</span>秒后跳转到第一个链接地址</p>
+				<a href="list.html">商品列表</a>
+				<a href="addnew.html">添加新商品</a>
+				
+			</div>
+			<div class="footer">
+				共执行 9 个查询，用时 0.024257 秒，Gzip 已禁用，内存占用 3.581 MB<br/>
+				版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../js/jquery.js" ></script>
+	<script>
+		var count = $(".count").html();
+		var timer = setInterval(function(){
+			count --;
+			$(".count").html(count);
+			if(count == 0){
+				location.href = "list.html";
+				clearInterval(timer);
+			}
+		},1000)
+	</script>
+</html>
