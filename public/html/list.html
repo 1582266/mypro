@@ -30,8 +30,8 @@
 				<select name="">
 					<option value="">全部</option>
 				</select>
-				关键字：<input type="text" />
-				<button>搜索</button>
+				关键字：<input type="text" class="keywords" />
+				<button class="btn">搜索</button>
 			</form>
 			
 			<div class="list">
@@ -75,17 +75,19 @@
 						<a href="">操作 </a>
 					</span>
 				</h3>
-				<h3>
+				<div class="prolist">
+				<!--<h3>
 					<span>
 						<input type="checkbox" />
+						<i></i>
 					</span>
 					<span></span>
 					<span></span>
 					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
+					<span><img class="imgs" src="../img/0.gif"/></span>
+					<span><img  class="imgs" src="../img/1.gif"/></span>
+					<span><img  class="imgs" src="../img/1.gif"/></span>
+					<span><img  class="imgs" src="../img/1.gif"/></span>
 					<span></span>
 					<span></span>
 					<span></span>
@@ -93,15 +95,22 @@
 						<a href=""><img src="../img/view.gif"/></a>
 						<a href=""><img src="../img/edit.gif"/></a>
 						<a href=""><img src="../img/copy.gif"/></a>
-						<a href=""><img src="../img/trash.gif"/></a>
+						<img src="../img/trash.gif"/>
 					</span>
-				</h3>
+				</h3>-->
+				</div>
 				<p class="empty">没有找到任何记录</p>
 				<p class="pages">
-					总计<span> 0 </span>个记录分为<span> 1 </span>页当前第<span> 1 </span>页，每页<input type="text" value="15" /> |
-					<a href="">第一页</a><a href="">上一页</a><a href="">下一页</a><a href="">最末页</a>
-					<select>
-						<option value="">1</option>
+					总计<span class="total">  </span>个记录
+					分为<span class="totalpage">  </span>页
+					当前第<span class="currentpage">  1</span>页，
+					每页<input type="text" class="perpagenum" value="10" /> |
+					<a href="" class="firstpage">第一页</a>
+					<a href="" class="prepage">上一页</a>
+					<a href="" class="nextpage">下一页</a>
+					<a href="" class="lastpage">最末页</a>
+					<select class="selections">
+						
 					</select>
 				</p>
 			</div>

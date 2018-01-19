@@ -10,7 +10,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/h1723");
+mongoose.connect("mongodb://localhost/h1723",{useMongoClient:true});
 
 var app = express();
 

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	
+</head>
+<body>	
+
+		<!----------------right------------------>
+		<div class="right addnew">
+			<h2>
+				<a href="">ECSHOP管理中心</a>
+				<span> - 商品列表</span>
+				<img src="../img/jnsy.png"/>
+				<a href="">商品列表</a>
+			</h2>
+			
+			<div class="msg">
+				<p class="classify">
+					<span>通用信息</span>
+					<span>详细描述</span>
+					<span>其他信息</span>
+					<span>商品属性</span>
+					<span>商品相册</span>
+					<span>关联商品</span>
+					<span>配件</span>
+					<span>关联文章</span>
+				</p>
+				<div class="wrap">
+				<!---------------info-------------------->
+				<div class="info change">
+					<p>
+						<span>商品名称：</span>
+						<input type="text" id="goods_name" value="" />
+						<select name="">
+							<option value="">字体样式</option>
+						</select>
+					</p>
+					<p>
+						<span>商品货号：</span>
+						<input type="text" id="item" value="" />
+					</p>
+					<p><span></span>如果您不输入商品货号，系统将自动生成一个唯一的货号。</p>
+					<p>
+						<span>商品分类：</span>
+						<select name="">
+							<option value="">请选择...</option>
+						</select>
+						<input type="button" value="添加分类" />
+					</p>
+					<p>
+						<span>扩展分类：</span>
+						<input type="button" value="添加" />
+					</p>
+					<p>
+						<span>商品品牌：</span>
+						<select name="">
+							<option value="">请选择...</option>
+						</select>
+						<input type="button" value="添加品牌" />
+					</p>
+					<p>
+						<span>本店售价：</span>
+						<input type="text" id="price" value="0" />
+						<input type="button" value="按市场价计算" />
+					</p>
+					<p>
+						<span>会员价格：</span>
+						注册用户<input type="text" id="" value="" />
+						代销用户<input type="text" id="" value="" />
+						vip<input type="text" id="" value="" />
+					</p>
+					<p><span></span>会员价格为-1时表示会员价格按会员等级折扣率计算，你也可以为每个等级指定一个固定价格</p>
+					<p>
+						<span>商品优惠价格：</span>
+						[+]优惠数量<input type="text" id="" value="" />
+						优惠价格<input type="text" id="" value="" />
+					</p>
+					<p><span></span>购买数量达到优惠数量时享受的优惠价格</p>
+					<p>
+						<span>市场售价：</span>
+						<input type="text" id="" value="" />
+						<input type="button" id="" value="取整数" />
+					</p>
+					<p>
+						<span>虚拟销量：</span>
+						<input type="text" id="num" value="0" />	
+					</p>
+					<p>
+						<span>赠送消费积分数：</span>
+						<input type="text" id="" value="" />	
+					</p>
+					<p><span></span>购买该商品时赠送消费积分数，-1表示按商品价格赠送</p>
+					<p>
+						<span>赠送等级积分数：</span>
+						<input type="text" id="" value="" />	
+					</p>
+					<p><span></span>购买该商品时赠送等级积分数，-1表示按商品价格赠送</p>
+					<p>
+						<span>积分购买金额：</span>
+						<input type="text" id="" value="" />	
+					</p>
+					<p><span></span>(此处需填写金额)购买该商品时最多可以使用积分的金额</p>
+					<p>
+						<span><input type="checkbox" />促销价：</span>
+						<input type="text" id="" value="" />	
+					</p>
+					<p>
+						<span>促销日期：</span>
+						<input type="text" id="" value="" />	
+						<input type="button" id="" value="选择" /> - 
+						<input type="text" id="" value="" />	
+						<input type="button" id="" value="选择" /> 
+					</p>
+					<p>
+						<span>上传商品图片：</span>
+						<input type="file" id="" value="浏览" />	
+					</p>
+					<p><span></span><input type="text" id="" value="商品图片外部URL" /></p>
+					<p>
+						<span>上传商品缩略图：</span>
+						<input type="file" id="" value="浏览" />		
+					</p>
+					<p><span></span><input type="text" id="" value="商品缩略图外部URL" /></p>
+					<p><span></span>
+						<input type="checkbox" />
+						自动生成商品缩略图
+					</p>
+					<p>
+						<span></span>
+						<input type="button" id="sure" value="确定" />
+						<input type="button" id="clear" value="重置" />
+					</p>
+				</div>
+				<!--------------details------------------>
+				<div class="details change">
+					<textarea name="" rows="12" cols="100"></textarea>
+					<p>
+						<input type="button" value="确定" />
+						<input type="button" value="重置" />
+					</p>
+				</div>
+				<!------------others-------------->
+				<div class="others change">
+					<p>
+						<span>商品重量：</span>
+						<input type="text" id="" value="" />
+						<select name="">
+							<option value="">千克</option>
+						</select>
+					</p>
+					<p>
+						<span>商品库存数量：</span>
+						<input type="text" id="" value="" />
+					</p>
+					<p>
+						<span></span>
+						库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量
+					</p>
+					<p>
+						<span>库存警告数量：</span>
+						<input type="text" id="" value="" />
+					</p>
+					<p>
+						<span>加入推荐：</span>
+						<input type="checkbox" />精品
+						<input type="checkbox" />新品
+						<input type="checkbox" />热销
+					</p>
+					<p>
+						<span>上架：</span>
+						<input type="checkbox" />打勾表示允许销售，否则不允许销售。
+					</p>
+					<p>
+						<span>能作为普通商品销售：</span>
+						<input type="checkbox" />打勾表示能作为普通商品销售，否则只能作为配件或赠品销售。
+					</p>
+					<p>
+						<span>是否为免运费商品：</span>
+						<input type="checkbox" />打勾表示此商品不会产生运费花销，否则按照正常运费计算。
+					</p>
+					<p>
+						<span>商品关键词：</span>
+						<input type="text" />用空格分隔
+					</p>
+					<p>
+						<span>商品简单描述：</span>
+						<textarea name="" rows="3" cols="30"></textarea>
+					</p>
+					<p>
+						<span>商家备注：</span>
+						<textarea name="" rows="3" cols="30"></textarea>
+					</p>
+					<p>
+						<span></span>
+						 仅供商家自己看的信息
+					</p>
+					<p>
+						<span></span>
+						<input type="button" id="" value="确定" />
+						<input type="button" id="" value="重置" />
+					</p>
+				</div>
+				<!---------------attrs----------------------->
+				<div class="attrs change">
+					<p>
+						<span>商品类型：</span>
+						<select name="">
+							<option value="">请选择商品类型</option>
+						</select>
+					</p>
+					<p>
+						<span></span>
+						请选择商品的所属类型，进而完善此商品的属性
+					</p>
+					<p>
+						<span></span>
+						<input type="button" id="" value="确定" />
+						<input type="button" id="" value="重置" />
+					</p>
+				</div>
+				<!-----------------pics---------------------->
+				<div class="pics change">
+					<p>
+						<span><a href="">[+]</a>图片描述：</span>
+						<input type="text" id="" value="" />
+						<input type="file" value="" />
+						<input type="text" placeholder="或者输入外部图片链接地址" />
+					</p>
+					<p>
+						<input type="button" id="" value="确定" />
+						<input type="button" id="" value="重置" />
+					</p>
+				</div>
+				<!---------------relation----------------------->
+				<div class="relation change">
+					<p>
+						<img src="../img/search.gif"/>
+						<select name="">
+							<option value="">所有分类</option>
+						</select>
+						<select name="">
+							<option value="">所有品牌</option>
+						</select>
+						<input type="text" value="" />
+						<input type="button" value="搜索" />
+					</p>
+					<p>
+						<span>可选商品</span>
+						<span>操作</span>
+						<span>跟该商品关联的商品</span>     	
+					</p>
+					<p>
+						<span class="box"></span>
+						<span class="operate">
+							<input type="radio" />单向关联<br/>
+							<input type="radio" />双向关联<br/>
+							<button>>></button><br/>
+							<button>></button><br/>
+							<button><</button><br/>
+							<button><<</button>
+						</span>
+						<span class="box"></span>
+					</p>
+					<p>
+						<input type="button" id="" value="确定" />
+						<input type="button" id="" value="重置" />
+					</p>
+				</div>
+				<!---------------parts-------------------->
+				<div class="parts change">
+					<p>
+						<img src="../img/search.gif"/>
+						<select name="">
+							<option value="">所有分类</option>
+						</select>
+						<select name="">
+							<option value="">所有品牌</option>
+						</select>
+						<input type="text" value="" />
+						<input type="button" value="搜索" />
+					</p>
+					<p>
+						<span>可选商品</span>
+						<span>操作</span>
+						<span>该商品的配件</span>     	
+					</p>
+					<p>
+						<span class="box"></span>
+						<span class="operate">
+							价格<br/>
+							<input type="text" value="" /><br/>
+							<button>></button><br/>
+							<button><</button><br/>
+							<button><<</button>
+						</span>
+						<span class="box"></span>
+					</p>
+					<p>
+						<input type="button" id="" value="确定" />
+						<input type="button" id="" value="重置" />
+					</p>
+				</div>
+				<!---------------article---------------------->
+				<div class="article change">
+					<p>
+						<img src="../img/search.gif"/>
+						文章标题
+						<input type="text" value="" />
+						<input type="button" value="搜索" />
+					</p>
+					<p>
+						<span>可选文章</span>
+						<span>操作</span>
+						<span>跟该商品关联的文章</span>     	
+					</p>
+					<p>
+						<span class="box"></span>
+						<span class="operate">
+							<button>>></button><br/>
+							<button>></button><br/>
+							<button><</button><br/>
+							<button><<</button>
+						</span>
+						<span class="box"></span>
+					</p>
+					<p>
+						<input type="button" id="" value="确定" />
+						<input type="button" id="" value="重置" />
+					</p>
+				</div>
+				</div>
+			</div>
+			
+			<div class="footer">
+				共执行 9 个查询，用时 0.024257 秒，Gzip 已禁用，内存占用 3.581 MB<br/>
+				版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。
+			</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="../js/jquery.js" ></script>
+	<script>
+//main nav切换背景
+var dt = $("#main .left dl dt");
+var a = $("#main .left dl dd a");
+
+var cur = -1;
+for(let i = 0;i < dt.length;i ++){
+	dt[i].index = i;
+	var count = 1;
+	$(dt[i]).click(function(){
+		cur = dt[i].index;
+//		console.log(cur);
+		$(dt[i]).siblings("dd").toggleClass("show");
+		if(count % 2){
+			$(dt[i]).find("span").css("background","url(img/menu1_"+(i+1)+".png) no-repeat 9px 0");
+		}else{
+			$(dt[i]).find("span").css("background","url(img/menu_"+(i+1)+".png) no-repeat 9px 0");
+		}
+		count ++;
+	})
+	
+	$(dt[i]).hover(function(){
+		$(this).css("background","#454545");
+	},function(){
+		$(this).css("background","#575757");
+		$(dt[cur]).css("background","#454545");
+	})
+	
+}
+
+a.hover(function(){
+	$(this).css("background","#797979").siblings().css("background","#575757");
+})
+
+//导航菜单显示隐藏
+var center = $("#main .center a");
+var left = $("#main .left");
+var bar = $(".none");
+var num = 1;
+center.click(function(){
+	if(num % 2){
+		$(this).find("img").attr("src","img/arrow_left.gif");
+	}else{
+		$(this).find("img").attr("src","img/arrow_right.gif");
+	}
+	num ++;
+	left.toggleClass("hide");
+	bar.toggleClass("block");
+	return false;
+})
+
+//切换
+var cut = $(".classify span");
+var change = $(".change");
+
+$(cut[0]).addClass("white");
+$(change[0]).show().siblings().hide();
+
+cut.click(function(){
+	$(this).addClass("white").siblings().removeClass("white");
+	$(change[$(this).index()]).show().siblings().hide();
+})
+
+//添加新商品
+var goods_name = $("#goods_name");
+var item = $("#item");
+var price = $("#price");
+var num = $("#num");
+
+var sure = $("#sure");
+var clear = $("#clear"); 
+var cookievalue = getCookie("serial_number");
+sure.click(function(){
+	if(goods_name.val() == ""){
+		alert("商品名不能为空!");
+	}else{
+		$.ajax({
+			url:"/update4ajax",
+			type:"post",
+			data:{
+				serial_number : cookievalue,
+				goods_name : goods_name.val(),
+				item : item.val(),
+				price : price.val()
+			},
+			success:function(res){
+				console.log(res);
+				if(res.code == 1){
+					location.href = "success.html";
+				}else{
+					alert(res.msg);
+				}
+			}
+		})
+	}
+})
+
+
+var cookievalue = getCookie("serial_number");
+$.ajax({
+	type:"post",
+	url:"/edit4ajax",
+	data:{
+		"serial_number" : cookievalue
+	},
+	success:function(docs){
+		console.log(docs);
+		goods_name.val(docs[0].goods_name);
+		item.val(docs[0].item);
+		price.val(docs[0].price);
+	}
+})
+
+function getCookie(key){
+	var cookieKey = encodeURIComponent(key) + "=";
+	var str = document.cookie;
+	var start = str.indexOf(cookieKey);
+	var cookieValue = "";
+	if(start != -1){
+		var end = str.indexOf(";",start);
+		if(end == -1){
+			end = str.length;
+		}
+		cookieValue = decodeURIComponent(str.substring(start + cookieKey.length,end));
+	}
+	return cookieValue;
+}
+
+
+	</script>
+</html>
+
+     
+
+

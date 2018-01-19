@@ -287,9 +287,12 @@ table {
   .right .list {
     width: 1068px;
     margin-top: 10px; }
-    .right .list h3 {
-      background: #f3f3f3;
+    .right .list .prolist {
       border: 1px solid #dddddd;
+      background: #fff; }
+    .right .list h3 {
+      background: #fff;
+      border-bottom: 1px solid #dddddd;
       height: 45px; }
       .right .list h3 span {
         border-right: 1px solid #dddddd;
@@ -358,7 +361,11 @@ table {
         height: 21px;
         line-height: 20px;
         padding-left: 3px;
-        margin: 0 3px; }
+        margin: 0 3px;
+        text-align: center; }
+  .right .list > h3 {
+    background: #f3f3f3;
+    border: 1px solid #dddddd; }
   .right .options {
     height: 40px;
     padding-top: 2px; }
