@@ -29,10 +29,7 @@ router.post("/login4ajax", function(req, res) {
 		code: 1,
 		msg: "登录成功"
 	}
-	UserModel.find({
-		username: username,
-		psw: psw
-	}, function(err, docs) {
+	UserModel.find({username: username,psw: psw}, function(err, docs) {
 		if(docs.length == 0) {
 			result.code = "-100";
 			result.msg = "用户名或密码错误";
@@ -47,9 +44,7 @@ router.post("/login4ajax", function(req, res) {
 //先从数据库中获取总数
 var num = 1;
 var serial_number = 1;
-GoodsModel.count({
-	flag: 1
-}, function(err, count) {
+GoodsModel.count({flag: 1}, function(err, count) {
 	num = count;
 	serial_number = count;
 })
@@ -72,7 +67,7 @@ router.post("/add4ajax", function(req, res) {
 	gm.item = item;
 	gm.flag = 1;
 	gm.price = price;
-	gm.serial_number = ++serial_number;
+	gm.serial_number = ++ serial_number;
 	gm.save(function(err) {
 		if(err) {
 			result.code = -1;
@@ -134,13 +129,13 @@ router.post("/update4ajax", function(req, res) {
 	var price = req.body.price;
 	var result = {
 		code: 1,
-		msg: "商品保存成功！"
+		msg: "商品更新成功！"
 	}
 	console.log(serial_number);
 	GoodsModel.update({"serial_number":serial_number},{$set: {"goods_name": goods_name,"item":item,"price":price}},function(err){
 		if(err){
 			result.code = -1;
-			result.msg = "商品保存失败!";
+			result.msg = "商品更新失败!";
 		}
 		res.json(result);
 	});

@@ -102,6 +102,7 @@ var perpage = $(".perpagenum");
 var selections = $(".selections");
 var empty = $(".empty");
 var prolist = $(".prolist");
+var manage = $(".manage");
 
 var pagenum = currentpage.html();
 ajax(perpage.val(),pagenum);
@@ -126,7 +127,10 @@ function ajax(perpagenum,pagenum){
 			totalpage.html(obj.totalpage);
 			currentpage.html(obj.currentpage);
 			perpage.val(obj.perpagenum);
-			
+			manage.html(obj.total);
+			if($(".selections option:selected").text() != obj.currentpage){
+				$(".selections option:selected").text(obj.currentpage);
+			}
 			if(obj.data.length == 0){
 				empty.show();
 			}else{
@@ -166,7 +170,6 @@ function ajax(perpagenum,pagenum){
 
 //每页显示商品数变化时
 perpage.change(function(){
-	var pagenum = currentpage.html();
 	ajax(perpage.val(),pagenum);
 })
 
@@ -262,7 +265,14 @@ btn.click(function(){
 			totalpage.html(docs.totalpage);
 			currentpage.html(docs.currentpage);
 			perpage.val(docs.perpagenum);
-
+if($(".selections option:selected").text() != docs.currentpage){
+				$(".selections option:selected").text(docs.currentpage);
+			}
+			if(docs.data.length == 0){
+				empty.show();
+			}else{
+				empty.hide();
+			}
 			var content = "";
 			$(docs.data).each(function(index,value){
 				content += `
